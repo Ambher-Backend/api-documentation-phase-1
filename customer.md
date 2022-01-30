@@ -204,7 +204,7 @@ Route: BASE-URL/customer/verify-email-otp
 ##### Response(Success)
 ```
 {
-	status: 400,
+	status: 200,
 	data: null,
 	message: 'Customer Email OTP verified successfully'
 }
