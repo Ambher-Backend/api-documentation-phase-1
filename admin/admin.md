@@ -1,24 +1,27 @@
-## API documentation for the admin APIs.
+## API documentation for Main Admin APIs.
+
 > `BASE-URL` will be anything, for testing, backend team will be providing a dummy API.
 
+---
 
-***
 ### <u>Sign-up API</u>
+
 ```
 Type: POST
 Route: BASE-URL/admin/signup
 ```
+
 #### Parameters:
 
-| Param Name    | Data Type     | Required      | Remarks       |
-| ------------- |:-------------:|:-------------:|:-------------:|
-| name |String|true
-| phoneNumber | String |true
-| email | String |true
-| password | String |true |minimum length: 8
-
+| Param Name  | Data Type | Required |      Remarks      |
+| ----------- | :-------: | :------: | :---------------: |
+| name        |  String   |   true   |
+| phoneNumber |  String   |   true   |
+| email       |  String   |   true   |
+| password    |  String   |   true   | minimum length: 8 |
 
 ##### Request(Sample)
+
 ```
 {
 	name: 'Admin-1',
@@ -29,6 +32,7 @@ Route: BASE-URL/admin/signup
 ```
 
 ##### Response(Success)
+
 ```
 {
 	status: 201,
@@ -36,23 +40,29 @@ Route: BASE-URL/admin/signup
 	message: 'Admin Created'
 }
 ```
+
 > If any other status is received, then simply show failure and the message(response structure will be same)
-***
+
+---
+
 </br>
 
 ### <u>Login API</u>
+
 ```
 Type: POST
 Route: BASE-URL/admin/login
 ```
+
 #### Parameters:
 
-| Param Name    | Data Type     | Required      | Remarks       |
-| ------------- |:-------------:|:-------------:|:-------------:|
-| email | String |true
-| password | String |true
+| Param Name | Data Type | Required | Remarks |
+| ---------- | :-------: | :------: | :-----: |
+| email      |  String   |   true   |
+| password   |  String   |   true   |
 
 ##### Request(Sample)
+
 ```
 {
 	email: 'abc@demo.com',
@@ -61,6 +71,7 @@ Route: BASE-URL/admin/login
 ```
 
 ##### Response(Success)
+
 ```
 {
 	status: 200,
@@ -73,23 +84,29 @@ Route: BASE-URL/admin/login
 	message: 'Admin Login Successful'
 }
 ```
+
 > If any other status is received, then simply show failure and the message(response structure will be same)
-***
+
+---
+
 </br>
 
 ### <u>Get Admin API</u>
+
 ```
 Type: GET
-Route: BASE-URL/admin/:adminId
+Route: BASE-URL/admin/adminId
 ```
+
 #### Parameters:
 
-| Param Name    | Data Type     | Required      | Remarks       |
-| ------------- |:-------------:|:-------------:|:-------------:|
-|adminId | String | true | in `params`
-|currentToken | String | true | in `body`
+| Param Name   | Data Type | Required |   Remarks   |
+| ------------ | :-------: | :------: | :---------: |
+| adminId      |  String   |   true   | in `params` |
+| currentToken |  String   |   true   |  in `body`  |
 
 ##### Request(Sample)
+
 ```
 {
 	// in req.params
@@ -102,6 +119,7 @@ Route: BASE-URL/admin/:adminId
 ```
 
 ##### Response(Success)
+
 ```
 {
 	status: 200,
@@ -114,22 +132,28 @@ Route: BASE-URL/admin/:adminId
 	message: 'Success'
 }
 ```
+
 > If any other status is received, then simply show failure and the message(response structure will be same)
-***
+
+---
+
 </br>
 
 ### <u>Logout API</u>
+
 ```
 Type: POST
 Route: BASE-URL/admin/logout
 ```
+
 #### Parameters:
 
-| Param Name    | Data Type     | Required      | Remarks       |
-| ------------- |:-------------:|:-------------:|:-------------:|
-| currentToken |String|true
+| Param Name   | Data Type | Required | Remarks |
+| ------------ | :-------: | :------: | :-----: |
+| currentToken |  String   |   true   |
 
 ##### Request(Sample)
+
 ```
 {
 	currentToken: '12ef3vf3v4f35v3vcv3'
@@ -137,6 +161,7 @@ Route: BASE-URL/admin/logout
 ```
 
 ##### Response(Success)
+
 ```
 {
 	status: 200,
@@ -144,22 +169,28 @@ Route: BASE-URL/admin/logout
 	message: 'Admin Logged out'
 }
 ```
+
 > If any other status is received, then simply show failure and the message(response structure will be same)
-***
+
+---
+
 </br>
 
 ### <u>Generate Otp for a email API</u>
+
 ```
 Type: POST
 Route: BASE-URL/admin/new-email-otp
 ```
+
 #### Parameters:
 
-| Param Name    | Data Type     | Required      | Remarks       |
-| ------------- |:-------------:|:-------------:|:-------------:|
-| adminEmail | String |true
+| Param Name | Data Type | Required | Remarks |
+| ---------- | :-------: | :------: | :-----: |
+| adminEmail |  String   |   true   |
 
 ##### Request(Sample)
+
 ```
 {
 	adminEmail: 'abc@demo.com'
@@ -167,6 +198,7 @@ Route: BASE-URL/admin/new-email-otp
 ```
 
 ##### Response(Success)
+
 ```
 {
 	status: 200,
@@ -174,23 +206,29 @@ Route: BASE-URL/admin/new-email-otp
 	message: 'Admin Email OTP sent successfully'
 }
 ```
+
 > If any other status is received, then simply show failure and the message(response structure will be same)
-***
+
+---
+
 </br>
 
 ### <u>Verify Otp for a email API</u>
+
 ```
 Type: POST
 Route: BASE-URL/admin/verify-email-otp
 ```
+
 #### Parameters:
 
-| Param Name    | Data Type     | Required      | Remarks       |
-| ------------- |:-------------:|:-------------:|:-------------:|
-| adminEmail | String |true
-| otp | String |true
+| Param Name | Data Type | Required | Remarks |
+| ---------- | :-------: | :------: | :-----: |
+| adminEmail |  String   |   true   |
+| otp        |  String   |   true   |
 
 ##### Request(Sample)
+
 ```
 {
 	adminEmail: 'abc@demo.com',
@@ -199,6 +237,7 @@ Route: BASE-URL/admin/verify-email-otp
 ```
 
 ##### Response(Success)
+
 ```
 {
 	status: 200,
@@ -206,38 +245,7 @@ Route: BASE-URL/admin/verify-email-otp
 	message: 'Admin Email OTP verified successfully'
 }
 ```
+
 > If any other status is received, then simply show failure and the message(response structure will be same)
-***
-</br>
 
-### <u>Verify Vendor</u>
-```
-Type: POST
-Route: BASE-URL/admin/verify-vendor
-```
-#### Parameters:
-
-| Param Name    | Data Type     | Required      | Remarks       |
-| ------------- |:-------------:|:-------------:|:-------------:|
-| vendorId | String |true
-| currentToken | String |true
-
-
-##### Request(Sample)
-```
-{
-	vendorId: '8rf34hv89hg48hg34',
-	currentToken: '12345634fg34b5b4'
-}
-```
-
-##### Response(Success)
-```
-{
-	status: 200,
-	data: null,
-	message: 'Vendor Account Verified By Admin Successfully'
-}
-```
-> If any other status is received, then simply show failure and the message(response structure will be same)
-***
+---
