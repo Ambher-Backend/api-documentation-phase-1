@@ -26,7 +26,7 @@ Route: BASE-URL/customer/signup
 	phoneNumber: '9412222200',
 	email: 'abc@demo.com',
 	password: '12345678',
-    dob: '04-12-2001'
+    	dob: '04-12-2001'
 }
 ```
 
@@ -112,7 +112,7 @@ Route: BASE-URL/admin/:adminId
 		name: '<>',
 		email: '<>',
 		phoneNumber: '<>',
-        dob: '<>'
+        	dob: '<>'
 	},
 	message: 'Success'
 }
@@ -233,7 +233,7 @@ Route: BASE-URL/customer/create-dummy-data
 ```
 {
     internalAuthKey: 'dummyKey',
-	currentToken: '12345634fg34b5b4',
+    currentToken: '12345634fg34b5b4',
     deleteExisting: true,
     total: 10
 
