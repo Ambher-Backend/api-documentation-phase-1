@@ -273,7 +273,7 @@ Route: BASE-URL/vendor/verify-email-otp
 
 ```
 {
-	status: 400,
+	status: 200,
 	data: null,
 	message: 'Vendor Email OTP verified successfully'
 }
