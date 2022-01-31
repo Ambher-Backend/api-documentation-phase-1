@@ -230,3 +230,57 @@ Route: BASE-URL/vendor/new-email-otp
 	vendorEmail: "qwert@gmail.com"
 }
 ```
+##### Response(Success)
+
+```
+{
+	status: 200,
+	data: null,
+	message: 'Vendor Email OTP sent successfully'
+}
+```
+
+> If any other status is received, then simply show failure and the message(response structure will be same)
+
+---
+
+</br>
+
+### <u>Verify Otp for a email API</u>
+
+```
+Type: POST
+Route: BASE-URL/vendor/verify-email-otp
+```
+
+#### Parameters:
+
+| Param Name | Data Type | Required | Remarks |
+| ---------- | :-------: | :------: | :-----: |
+| vendorEmail|  String   |   true   |
+| otp        |  String   |   true   |
+
+##### Request(Sample)
+
+```
+{
+	vendorEmail: "qwert@gmail.com",
+        otp: "702702
+}
+```
+
+##### Response(Success)
+
+```
+{
+	status: 400,
+	data: null,
+	message: 'Vendor Email OTP verified successfully'
+}
+```
+
+> If any other status is received, then simply show failure and the message(response structure will be same)
+
+---
+
+
