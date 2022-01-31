@@ -139,7 +139,7 @@ Route: BASE-URL/vendor/login
 ```
 {
 	email: "qwert@gmail.com",
-    password: "jekekrlkell"
+        password: "jekekrlkell"
 }
 ```
 
