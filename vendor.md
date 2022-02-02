@@ -1,5 +1,5 @@
 ## API DOCUMENTATION FOR VENDOR
-> `BASE-URL` will be anything, for testing, backend team will be providing a dummy API
+>`BASE-URL` will be anything, for testing, backend team will be providing a dummy API
 ---
 ### <u>Signup API</u>
 
