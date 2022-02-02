@@ -1,5 +1,5 @@
 ## API DOCUMENTATION FOR VENDOR
->`BASE-URL` will be anything, for testing, backend team will be providing a dummy API
+> `BASE-URL` will be anything, for testing, backend team will be providing a dummy API
 ---
 ### <u>Signup API</u>
 
@@ -167,7 +167,7 @@ Route: BASE-URL/vendor/login
 }
 ```
 
->If any other status is received, then simply show failure and the message(response structure will be same).Note the status is 200 Even if vendor's credentials are correct but he/she is unverified in that case currentToken will not be present in data and product modify will be false also message: "Vendor unverified".
+> If any other status is received, then simply show failure and the message(response structure will be same).Note the status is 200 Even if vendor's credentials are correct but  he/she is unverified in that case currentToken will not be present in data and product modify will be false also message: "Vendor unverified".
 
 ---
 
