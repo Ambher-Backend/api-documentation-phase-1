@@ -93,7 +93,10 @@ Route: BASE-URL/admin/vendors
 					reviews: "",
 					rating: "",
 					totalOrders: "",
-					totalProducts: ""
+					totalProducts: "",
+					isVerified: <true or false>,
+					isVerifiedByAdmin: <true or false>,
+					isBlocked: <true or false>
 				},
 				{
 					_id: "2",
@@ -105,7 +108,10 @@ Route: BASE-URL/admin/vendors
 					reviews: "",
 					rating: "",
 					totalOrders: "",
-					totalProducts: ""
+					totalProducts: "",
+					isVerified: <true or false>,
+					isVerifiedByAdmin: <true or false>,
+					isBlocked: <true or false>
 				},
 				{
 					_id: "3",
@@ -117,7 +123,10 @@ Route: BASE-URL/admin/vendors
 					reviews: "",
 					rating: "",
 					totalOrders: "",
-					totalProducts: ""
+					totalProducts: "",
+					isVerified: <true or false>,
+					isVerifiedByAdmin: <true or false>,
+					isBlocked: <true or false>
 				},
 			]
 		},
@@ -134,7 +143,10 @@ Route: BASE-URL/admin/vendors
 					reviews: "",
 					rating: "",
 					totalOrders: "",
-					totalProducts: ""
+					totalProducts: "",
+					isVerified: <true or false>,
+					isVerifiedByAdmin: <true or false>,
+					isBlocked: <true or false>
 				},
 				{
 					_id: "5",
@@ -146,7 +158,10 @@ Route: BASE-URL/admin/vendors
 					reviews: "",
 					rating: "",
 					totalOrders: "",
-					totalProducts: ""
+					totalProducts: "",
+					isVerified: <true or false>,
+					isVerifiedByAdmin: <true or false>,
+					isBlocked: <true or false>
 				},
 			]
 		}
