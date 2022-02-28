@@ -1,6 +1,9 @@
 ## API DOCUMENTATION FOR VENDOR
+
 > `BASE-URL` will be anything, for testing, backend team will be providing a dummy API
+
 ---
+
 ### <u>Signup API</u>
 
 ```
@@ -10,14 +13,14 @@ Route- BASE-URL/vendor/signup
 
 #### Parameters
 
-| Param Name  | Data Type | Required |      Remarks      |
-| ----------- | :-------: | :------: | :---------------: |
+| Param Name  | Data Type | Required |              Remarks              |
+| ----------- | :-------: | :------: | :-------------------------------: |
 | name        |  String   |   true   |
 | phoneNumber |  String   |   true   |
 | email       |  String   |   true   |
-| password    |  String   |   true   | minimum length: 8 |
+| password    |  String   |   true   |         minimum length: 8         |
 | dob         |  String   |   true   |
-| Address     |  Array    |   false  | Atleast two fields must be filled|
+| Address     |   Array   |  false   | Atleast two fields must be filled |
 
 ```
 Address: [
@@ -37,16 +40,17 @@ Address: [
 ```
 
 #### Request(sample)
+
 ```
 {
-    
+
     name: kelore,
     phoneNumber: 8901929309,
     password: jekekrlkell,
     email: qwert@gmail.com,
     dob: 26/03/2003,
     address: [{flatNo: 657, buildingNo: block-a}]
-    
+
 }
 
 ```
@@ -78,7 +82,7 @@ Route- BASE-URL/vendor/vendorId
 | Param Name   | Data Type | Required |   Remarks   |
 | ------------ | :-------: | :------: | :---------: |
 | vendorId     |  String   |   true   | in `params` |
-| currentToken |  String   |   true   |  in `body`  |
+| currentToken |  String   |   true   | in `params` |
 
 ##### Request(Sample)
 
@@ -167,7 +171,7 @@ Route: BASE-URL/vendor/login
 }
 ```
 
-> If any other status is received, then simply show failure and the message(response structure will be same).Note the status is 200 Even if vendor's credentials are correct but  he/she is unverified in that case currentToken will not be present in data and product modify will be false also message: "Vendor unverified".
+> If any other status is received, then simply show failure and the message(response structure will be same).Note the status is 200 Even if vendor's credentials are correct but he/she is unverified in that case currentToken will not be present in data and product modify will be false also message: "Vendor unverified".
 
 ---
 
@@ -219,9 +223,9 @@ Route: BASE-URL/vendor/new-email-otp
 
 #### Parameters:
 
-| Param Name | Data Type | Required | Remarks |
-| ---------- | :-------: | :------: | :-----: |
-| vendorEmail|  String   |   true   |
+| Param Name  | Data Type | Required | Remarks |
+| ----------- | :-------: | :------: | :-----: |
+| vendorEmail |  String   |   true   |
 
 ##### Request(Sample)
 
@@ -230,6 +234,7 @@ Route: BASE-URL/vendor/new-email-otp
 	vendorEmail: "qwert@gmail.com"
 }
 ```
+
 ##### Response(Success)
 
 ```
@@ -255,10 +260,10 @@ Route: BASE-URL/vendor/verify-email-otp
 
 #### Parameters:
 
-| Param Name | Data Type | Required | Remarks |
-| ---------- | :-------: | :------: | :-----: |
-| vendorEmail|  String   |   true   |
-| otp        |  String   |   true   |
+| Param Name  | Data Type | Required | Remarks |
+| ----------- | :-------: | :------: | :-----: |
+| vendorEmail |  String   |   true   |
+| otp         |  String   |   true   |
 
 ##### Request(Sample)
 
@@ -282,5 +287,3 @@ Route: BASE-URL/vendor/verify-email-otp
 > If any other status is received, then simply show failure and the message(response structure will be same)
 
 ---
-
-
