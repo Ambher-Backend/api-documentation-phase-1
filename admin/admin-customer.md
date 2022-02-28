@@ -147,3 +147,59 @@ Route: BASE-URL/admin/customer-details/customerId
 > If any other status is received, then simply show failure and the message(response structure will be same)
 
 ---
+
+</br>
+
+### <u>Customer Search</u>
+
+```
+Type: GET
+Route: BASE-URL/admin/customer-search/:customerEmail
+```
+
+#### Parameters:
+
+| Param Name   | Data Type | Required |   Remarks   |
+| ------------ | :-------: | :------: | :---------: |
+| customerEmail|  String   |   true   | in `params` |
+| currentToken |  String   |   true   |  in `body`  |
+
+##### Request(Sample)
+
+```
+{
+	// in req.params
+	customerEmail: 'qwert@gmail.com'
+},
+{
+	// in req.body
+	currentToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjFjY2UzMDIzZmFjYzJiZ...'
+}
+```
+
+##### Response(Success)
+
+```
+{
+	status: 200,
+	data: {
+		_id: "",
+		profilePictureUrl: "",
+		name: "",
+		phoneNumber: "",
+		email: "",
+		reviews: "",
+		Orders: "",
+		isVerified: <true or false>,
+		isBlocked: <true or false>,
+		blockedReason: ""; // only if isBlocked is true
+		blockedBy: ""; // only if isBlocked is true
+		blockedByEmail: ""; // only if isBlocked is true
+	},
+	message: 'Customer fetched'
+}
+```
+
+> If any other status is received, then simply show failure and the message(response structure will be same). Possible error status are; 400 and 500 and in case of error data part in the message will be null.
+
+---
