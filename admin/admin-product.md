@@ -115,7 +115,7 @@ Route: BASE-URL/admin/product-details/productId
 | Param Name   | Data Type | Required |   Remarks   |
 | ------------ | :-------: | :------: | :---------: |
 | productId    |  String   |   true   | in `params` |
-| currentToken |  String   |   true   |  in `body`  |
+| currentToken |  String   |   true   | in `params` |
 
 ##### Request(Sample)
 

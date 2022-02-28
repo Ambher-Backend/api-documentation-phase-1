@@ -188,7 +188,7 @@ Route: BASE-URL/admin/vendor-details/vendorId
 | Param Name   | Data Type | Required |   Remarks   |
 | ------------ | :-------: | :------: | :---------: |
 | vendorId     |  String   |   true   | in `params` |
-| currentToken |  String   |   true   |  in `body`  |
+| currentToken |  String   |   true   | in `params` |
 
 ##### Request(Sample)
 

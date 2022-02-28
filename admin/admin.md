@@ -103,7 +103,7 @@ Route: BASE-URL/admin/adminId
 | Param Name   | Data Type | Required |   Remarks   |
 | ------------ | :-------: | :------: | :---------: |
 | adminId      |  String   |   true   | in `params` |
-| currentToken |  String   |   true   |  in `body`  |
+| currentToken |  String   |   true   | in `params` |
 
 ##### Request(Sample)
 

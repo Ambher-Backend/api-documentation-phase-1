@@ -105,7 +105,7 @@ Route: BASE-URL/admin/customer-details/customerId
 | Param Name   | Data Type | Required |   Remarks   |
 | ------------ | :-------: | :------: | :---------: |
 | customerId   |  String   |   true   | in `params` |
-| currentToken |  String   |   true   |  in `body`  |
+| currentToken |  String   |   true   | in `params` |
 
 ##### Request(Sample)
 
@@ -159,10 +159,10 @@ Route: BASE-URL/admin/customer-search/:customerEmail
 
 #### Parameters:
 
-| Param Name   | Data Type | Required |   Remarks   |
-| ------------ | :-------: | :------: | :---------: |
-| customerEmail|  String   |   true   | in `params` |
-| currentToken |  String   |   true   |  in `body`  |
+| Param Name    | Data Type | Required |   Remarks   |
+| ------------- | :-------: | :------: | :---------: |
+| customerEmail |  String   |   true   | in `params` |
+| currentToken  |  String   |   true   | in `params` |
 
 ##### Request(Sample)
 
