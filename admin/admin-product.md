@@ -122,10 +122,7 @@ Route: BASE-URL/admin/product-details/productId
 ```
 {
 	// in req.params
-	productId: '13544643g535g'
-},
-{
-	// in req.body
+	productId: '13544643g535g',
 	currentToken: '12ef3vf3v4f35v3vcv3'
 }
 ```
@@ -155,6 +152,63 @@ Route: BASE-URL/admin/product-details/productId
     verifiedByName: '', // only if is isVerifiedByAdmin is true
   }
   message: 'Product Details'
+}
+```
+
+> If any other status is received, then simply show failure and the message(response structure will be same)
+
+---
+
+</br>
+
+### <u>Product Orders</u>
+
+```
+Type: GET
+Route: BASE-URL/admin/product-details/orders
+```
+
+#### Parameters:
+
+| Param Name   | Data Type | Required |   Remarks   |
+| ------------ | :-------: | :------: | :---------: |
+| productId    |  String   |   true   | in `params` |
+| currentToken |  String   |   true   | in `params` |
+
+##### Request(Sample)
+
+```
+{
+	productId: '13544643g535g',
+	currentToken: "121d223",
+},
+```
+
+##### Response(Success)
+
+```
+{
+	status: 200,
+	data: {
+		page: 1,
+		objectArray: [
+			{
+				_id: "1",
+				vendorName: "hello",
+				productName: "hello",
+				status: "Hello",
+				totalPrice: 11322.1231
+			},
+			{
+				_id: "2",
+				vendorName: "hello",
+				productName: "hello",
+				status: "Hello",
+				totalPrice: 11322.1231
+			},
+		],
+	}
+	message: 'Product Orders'
 }
 ```
 

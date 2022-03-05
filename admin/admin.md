@@ -249,3 +249,53 @@ Route: BASE-URL/admin/verify-email-otp
 > If any other status is received, then simply show failure and the message(response structure will be same)
 
 ---
+
+</br>
+
+### <u>Get Order by Order Id</u>
+
+```
+Type: GET
+Route: BASE-URL/admin/orders/get-details
+```
+
+#### Parameters:
+
+| Param Name   | Data Type | Required |   Remarks   |
+| ------------ | :-------: | :------: | :---------: |
+| orderId      |  String   |   true   | in `params` |
+| currentToken |  String   |   true   | in `params` |
+
+##### Request(Sample)
+
+```
+{
+    orderId: "cwe3rewv3rf",
+    currentToken: "d332d2d.23d.32d2.d32d"
+}
+```
+
+##### Response(Success)
+
+```
+{
+	status: 200,
+	data: {
+		page: 1,
+		objectArray: [
+			{
+				_id: "1",
+				vendorName: "hello",
+				productName: "hello",
+				status: "Hello",
+				totalPrice: 11322.1231
+			},
+		],
+	}
+	message: 'Order Details Fetched Successfully.'
+}
+```
+
+> If any other status is received, then simply show failure and the message(response structure will be same)
+
+---
